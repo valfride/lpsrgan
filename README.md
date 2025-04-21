@@ -3,6 +3,8 @@ Unofficial implementation of the SR model proposed by Pan et al. in the paper "L
 
 # Usage
 
+This section provides instructions on testing the model, training it from scratch, and fine-tuning it on a custom dataset. Follow the steps below to set up and run the model. Additionally,
+
 # Testing
 
 To test the model, ensure that the config file specifies the path to the .pth file (e.g., config file), as shown in the example below:
