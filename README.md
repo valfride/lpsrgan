@@ -32,8 +32,9 @@ resume: null
 To train or fine-tune the model on a custom dataset, you need to create a .txt file that lists the image paths along with their corresponding data split (training, validation, or testing). Each line in the file should follow this format:
 
 ```txt
-path/to/LP_image1.jpg;training
-path/to/LP_image2.jpg;validation
-path/to/LP_image3.jpg;testing
+ABC1234;path/to/LP_image1.jpg;training
+ABC1A34;path/to/LP_image2.jpg;validation
+ABC2B35;path/to/LP_image3.jpg;testing
+
 ```
 For reference, you can check example files, such as [train_dir_split.txt](train_dir_split.txt) (with its images and .txt files annotations located under [train_dir](train_dir) directory), [split_all_pku.txt](split_all_pku.txt) and [split_all_rodosol.txt](split_all_rodosol.txt), which demonstrate this format.
