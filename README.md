@@ -3,11 +3,12 @@ Unofficial implementation of the SR model proposed by Pan et al. in the paper "L
 
 # Usage
 
-This section provides instructions on testing the model, training it from scratch, and fine-tuning it on a custom dataset. Follow the steps below to set up and run the model. Additionally,
+This section provides instructions on testing the model, training it from scratch, and fine-tuning it on a custom dataset following the methodology decribed by Nascimento et al. in the paper "Toward Advancing License Plate Super-Resolution in
+Real-World Scenarios: A Dataset and Benchmark." Follow the steps below to set up and run the models.
 
 # Testing
 
-To test the model, ensure that the config file specifies the path to the .pth file (e.g., config file), as shown in the example below:
+To test the model, ensure that the config file specifies the path to each of the .pth files (e.g., config file), as shown in the example below:
 
 ```yaml
 model:
@@ -36,7 +37,8 @@ Once the configuration is set, execute the following command to start the test:
 python3 test_mv.py --config ./config/testing.yaml --save ./path_to_save_location --tag example
 ```
 
-The pre-tained model of GP_LPR can be found under [GP_LPR Unofficial Implementation](https://github.com/valfride/gplpr/tree/main) with the pretrained model under tag section.
+The pre-tained model of GP_LPR can be found under [GP_LPR Unofficial Implementation](https://github.com/valfride/gplpr/tree/main) with the pretrained model under releases section.
+The pre-trained model for LPSRGAN can be found in the release section of this repository.
 
 ## Training from Scratch
 
@@ -44,6 +46,12 @@ To train the model from scratch, update the following variables in the [config f
 
 ```yaml
 resume: null
+```
+
+Optionally, you can add the --tag argument for versioning:
+
+```python
+python3 train.py --config ./config/training.yaml --save True
 ```
 
 ## Training on a Custom Dataset
