@@ -10,14 +10,33 @@ This section provides instructions on testing the model, training it from scratc
 To test the model, ensure that the config file specifies the path to the .pth file (e.g., config file), as shown in the example below:
 
 ```yaml
-test
+model:
+  name: lpsrgan
+  load: ./save/testing/model_lpsrgan.pth
+  args:
+    num_blocks: 3
+    dropout_prob: 0.5
+
+model_ocr:
+  name: GPLPR
+  load: ./save/testing/model_ocr_GPLPR.pth
+  args:
+    alphabet: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    nc: 3
+    K: 7
+    isSeqModel: True
+    head: 2
+    inner: 256
+    isl2Norm: True
 ```
 
 Once the configuration is set, execute the following command to start the test:
 
 ```
-python3 test.py
+python3 test_mv.py --config ./config/testing.yaml --save ./path_to_save_location --tag example
 ```
+
+The model to GP_LPR can be found under [GP_LPR Unofficial Implementation] (config/training.yaml) altogether with the pretrained model under the page tag section.
 
 ## Training from Scratch
 
