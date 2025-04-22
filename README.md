@@ -36,7 +36,7 @@ Once the configuration is set, execute the following command to start the test:
 python3 test_mv.py --config ./config/testing.yaml --save ./path_to_save_location --tag example
 ```
 
-The pre-tained model of GP_LPR can be found under [GP_LPR Unofficial Implementation] (config/training.yaml) altogether with the pretrained model under the page tag section.
+The pre-tained model of GP_LPR can be found under [GP_LPR Unofficial Implementation](https://github.com/valfride/gplpr/tree/main) with the pretrained model under tag section.
 
 ## Training from Scratch
 
