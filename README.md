@@ -8,7 +8,8 @@ Unofficial implementation of the SR model proposed by Pan et al. in the paper "L
 - PyTorch 1.10+
 - CUDA 11.3+ (for GPU acceleration)
 - Required packages: `numpy`, `opencv-python`, `tqdm`, `yaml`, `torch`
-  Install via:  
+  Install via:
+  
   ```bash
   pip install -r requirements.txt
   ```
