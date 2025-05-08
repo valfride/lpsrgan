@@ -55,7 +55,7 @@ CM: False
 loss: 
   name: lpsrganLoss
   args:
-    load: /home/vwnascimento/DCDPA/models_ocr_pre_trained/RodoSol-SR
+    load: ./RodoSol-SR
     weight: null
     size_average: null
     
@@ -73,5 +73,6 @@ reduce_on_plateau:
 
 epoch_max: 3000
 epoch_save: 100
-resume: /home/vwnascimento/DCDPA/lpsrgan/save/_lpsrgan_train_14_03_2025/best_model_Epoch_116.pth
+resume: 
+#/best_model_Epoch_116.pth
 
