@@ -62,7 +62,7 @@ python3 test_mv.py --config ./config/testing.yaml --save ./results
 
 ## Training from Scratch
 
-To train the model from scratch, update the following variables in the [training config file](config/training.yaml):
+To train the model from scratch, update the following variables in the [training config file](config/LPSRGAN/train_lpsrgan.yaml):
 
 ```yaml
 resume: null  # Ensure no pretrained model is loaded
