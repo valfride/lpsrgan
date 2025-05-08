@@ -1,0 +1,77 @@
+model:
+  name: lpsrgan
+  args:
+    num_blocks: 3
+    dropout_prob: 0.5
+
+optimizer:
+  name: adam
+  args: 
+    lr: 1.e-4
+    betas: [0.5, 0.555]
+
+func_train: lpsrgan_train
+func_val: lpsrgan_val
+tag_view: MISR
+alphabet: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+train_dataset:
+  dataset:
+    name: multi_image
+    args:
+      path_split: ./split_all_example.txt
+      phase: training
+      
+  wrapper:
+    name: lpsrgan
+    args:
+      imgW: 48
+      imgH: 16
+      aug: True
+      image_aspect_ratio: 3
+      background: (127, 127, 127)
+  batch: 32
+
+val_dataset:
+  dataset:
+    name: multi_image
+    args:
+      path_split: ./split_all_example.txt
+      phase: validation
+
+  wrapper:
+    name: lpsrgan
+    args:
+      imgW: 48
+      imgH: 16
+      aug: False
+      image_aspect_ratio: 3
+      background: (127, 127, 127)
+  batch: 32
+
+epoch_max: 3000
+CM: False
+
+loss: 
+  name: lpsrganLoss
+  args:
+    load: /home/vwnascimento/DCDPA/models_ocr_pre_trained/RodoSol-SR
+    weight: null
+    size_average: null
+    
+early_stopper:
+  patience: 50
+  min_delta: 0
+  counter: 0
+
+reduce_on_plateau:
+  mode: 'min'
+  factor: 0.5
+  patience: 10
+  min_lr: 1.e-7
+  verbose: True
+
+epoch_max: 3000
+epoch_save: 100
+resume: /home/vwnascimento/DCDPA/lpsrgan/save/_lpsrgan_train_14_03_2025/best_model_Epoch_116.pth
+

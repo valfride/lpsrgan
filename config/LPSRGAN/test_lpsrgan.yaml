@@ -1,0 +1,40 @@
+model:
+  name: lpsrgan
+  load: /home/vwnascimento/DCDPA/lpsrgan/save/_lpsrgan_train_14_03_2025/best_model_Epoch_116.pth
+  args:
+    num_blocks: 3
+    dropout_prob: 0.5
+
+model_ocr:
+  name: GPLPR
+  load: /home/vwnascimento/DCDPA/models_ocr_pre_trained/GP_LPR_REAL_1920x1080_1280x960+RODOSOL/best_model_Epoch_142.pth
+  args:
+    alphabet: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    nc: 3
+    K: 7
+    isSeqModel: True
+    head: 2
+    inner: 256
+    isl2Norm: True
+
+
+
+test_dataset:
+  dataset:
+    name: multi_image
+    args:
+      path_split: ./split_all_example.txt
+      phase: testing
+
+  wrapper:
+    name: SR_multi_image
+    args:
+      imgW: 48
+      imgH: 16
+      aug: False
+      image_aspect_ratio: 3
+      background: (127, 127, 127)
+      in_images: 1
+      test: True
+  batch: 1
+

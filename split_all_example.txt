@@ -1,0 +1,12 @@
+AAA9357;./dataset_intelbras_1920x1080/brazilian/plate-002494;training
+AAA9357;./dataset_intelbras_1920x1080/brazilian/plate-002741;training
+AAA9357;./dataset_intelbras_1920x1080/brazilian/plate-002859;training
+AAM6015;./dataset_intelbras_1920x1080/brazilian/plate-000882;training
+AAP9991;./dataset_intelbras_1920x1080/brazilian/plate-002810;training
+SIP5B04;./dataset_intelbras_1920x1080/mercosur/plate-005471;validation
+SJC3E04;./dataset_intelbras_1920x1080/mercosur/plate-001332;validation
+TAM0I70;./dataset_intelbras_1280X960/mercosur/plate-004447;testing
+TAN0F36;./dataset_intelbras_1280X960/mercosur/plate-001348;testing
+TCD3J76;./dataset_intelbras_1280X960/mercosur/plate-005881;testing
+TCH6I40;./dataset_intelbras_1280X960/mercosur/plate-005291;testing
+TIL7G47;./dataset_intelbras_1280X960/mercosur/plate-002511;testing
