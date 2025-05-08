@@ -3,6 +3,7 @@
 Unofficial implementation of the SR model proposed by Pan et al. in the paper "LPSRGAN: Generative Adversarial Networks for Super-Resolution of License Plate Image". This repository follows the methodology described by Nascimento et al. in "Toward Advancing License Plate Super-Resolution in Real-World Scenarios".
 
 ## Prerequisites
+
 - Python 3.8+
 - PyTorch 1.10+
 - CUDA 11.3+ (for GPU acceleration)
@@ -11,6 +12,7 @@ Unofficial implementation of the SR model proposed by Pan et al. in the paper "L
   ```bash
   pip install -r requirements.txt
   ```
+  
 # Installation
 
 ```bash
@@ -114,7 +116,7 @@ val_dataset:
       phase: validation
 ```
 
-For reference, you can check example files, such as [train_dir_split.txt](train_dir_split.txt) (with its images and .txt files annotations located under [train_dir](train_dir) directory), which demonstrate this format.
+For reference, you can check example files, such as [split_all_example.txt](split_all_example.txt) (with its images and .txt files annotations located under [dataset_intelbras_1280X960/mercosur](dataset_intelbras_1280X960/mercosur) and [dataset_intelbras_1920x1080](dataset_intelbras_1920x1080) directories), which demonstrate this format.
 
 ## Configuration Files
 
