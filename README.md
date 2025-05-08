@@ -133,7 +133,7 @@ For reference, you can check example files, such as [train_dir_split.txt](train_
 
 If you use this work, please cite the following works:
 
-```bibitex
+```bibtex
 @article{pan2024lpsrgan,
   title={LPSRGAN: Generative adversarial networks for super-resolution of license plate image},
   author={Pan, Yuecheng and Tang, Jin and Tjahjadi, Tardi},
@@ -144,13 +144,15 @@ If you use this work, please cite the following works:
   publisher={Elsevier}
 }
 
-@article{nascimento2024Toward,
-  title={Toward Advancing License Plate Super-Resolution in Real-World Scenarios: A Dataset and Benchmark},
-  author={},
-  journal={},
-  volume={},
-  pages={},
-  year={},
-  publisher={}
+@article{nascimento2025toward,
+  title = {Toward Advancing License Plate Super-Resolution in Real-World Scenarios: A Dataset and Benchmark},
+  author = {V. {Nascimento} and G. E. {Lima} and R. O. {Ribeiro} and W. R. {Schwartz} and R. {Laroca} and D. {Menotti}},
+  year = {2025},
+  journal = {Journal of the Brazilian Computer Society},
+  volume = {},
+  number = {},
+  pages = {1-14},
+  doi = {},
+  issn = {},
 }
 ```
