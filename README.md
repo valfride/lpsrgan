@@ -82,7 +82,7 @@ val_dataset:
 Optionally, you can add the --tag argument for versioning:
 
 ```bash
-python3 train.py --config ./config/training.yaml --save True --tag experiment_1
+python3 train.py --config ./config/training.yaml --save path/to/save/dest --tag experiment_1
 ```
 
 ## Training on a Custom Dataset
@@ -159,3 +159,18 @@ If you use this work, please cite the following works:
   issn = {},
 }
 ```
+
+Additionally, consider showing your support by **starring** :star: this repository.
+
+## Related Publications
+Explore our other works on license plate recognition and super-resolution:
+- [Combining Attention Module and Pixel Shuffle for License Plate Super-resolution (SIBGRAPI 2022)](https://ieeexplore.ieee.org/document/9991753)
+- [Super-Resolution of License Plate Images Using Attention Modules and Sub-Pixel Convolution Layers (Computers & Graphics 2023)](https://www.sciencedirect.com/science/article/pii/S0097849323000602?via%3Dihub)
+- [Full list of publications on vehicle identification](https://scholar.google.com/scholar?hl=pt-BR&as_sdt=0%2C5&as_ylo=2018&q=allintitle%3A+plate+OR+license+OR+vehicle+author%3A%22David+Menotti%22&btnG=)
+
+## Contact
+For questions or feedback, contact:
+
+**Valfride Wallace do Nascimento** [[Webpage](https://www.inf.ufpr.br/vwnascimento/)]
+
+[vwnascimento@inf.ufpr.br](mailto:email@example.com)
