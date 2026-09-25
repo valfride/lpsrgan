@@ -17,8 +17,8 @@ Unofficial implementation of the SR model proposed by Pan et al. in the paper "L
 # Installation
 
 ```bash
-git clone https://github.com/your-username/LPSRGAN.git
-cd LPSRGAN
+git clone https://github.com/valfride/lpsrgan.git
+cd lpsrgan
 ```
 
 # Usage
@@ -53,12 +53,12 @@ model_ocr:
 Once the configuration is set, execute the following command to start the test:
 
 ```
-python3 test_mv.py --config ./config/testing.yaml --save ./results
+python3 test_mv.py --config ./config/LPSRGAN/test_lpsrgan.yaml --save ./results
 ```
 
 * Pretrained models are available at the following locations:
   - Download GP_LPR from [GP_LPR Unofficial Implementation](https://github.com/valfride/gplpr/tree/main).
-  - The pre-trained model for LPSRGAN is available in the releases section of this repository.
+  - The pre-trained model for LPSRGAN is available in [GitHub Releases](https://github.com/valfride/lpsrgan/releases/tag/LPSRGAN_pre_trained_model).
 
 ## Training from Scratch
 
@@ -82,7 +82,7 @@ val_dataset:
 Optionally, you can add the --tag argument for versioning:
 
 ```bash
-python3 train.py --config ./config/training.yaml --save path/to/save/dest --tag experiment_1
+python3 train.py --config ./config/LPSRGAN/train_lpsrgan.yaml --save path/to/save/dest --tag experiment_1
 ```
 
 ## Training on a Custom Dataset
@@ -121,15 +121,15 @@ For reference, you can check example files, such as [split_all_example.txt](spli
 
 ## Configuration Files
 
-* Training: config/training.yaml
+* Training: `config/LPSRGAN/train_lpsrgan.yaml`
   - Adjust hyperparameters, dataset paths, and optimizer settings here.
 
-* Testing: config/testing.yaml
+* Testing: `config/LPSRGAN/test_lpsrgan.yaml`
   - Specify model checkpoints and test dataset details.
 
 ## Troubleshooting
-* CUDA Out of Memory: Reduce batch size in training.yaml.
-* Missing Pretrained Models: Ensure paths in testing.yaml or training.yaml are correct.
+* CUDA Out of Memory: Reduce the batch size in `config/LPSRGAN/train_lpsrgan.yaml`.
+* Missing Pretrained Models: Ensure checkpoint paths in the LPSRGAN test/training configs are correct.
 * Dataset Errors: Validate split file formatting and image paths.
 
 ## Citation
@@ -173,4 +173,4 @@ For questions or feedback, contact:
 
 **Valfride Wallace do Nascimento** [[Webpage](https://www.inf.ufpr.br/vwnascimento/)]
 
-[vwnascimento@inf.ufpr.br](mailto:email@example.com)
+[vwnascimento@inf.ufpr.br](mailto:vwnascimento@inf.ufpr.br)
