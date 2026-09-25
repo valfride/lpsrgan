@@ -4,9 +4,11 @@ Unofficial implementation of the SR model proposed by Pan et al. in the paper "L
 
 ## Prerequisites
 
-- Python 3.8+
-- PyTorch 1.10+
-- CUDA 11.3+ (for GPU acceleration)
+> **Tested environment:** Python 3.9.21 with PyTorch 2.6.0+cu124 and torchvision 0.21.0+cu124. The pinned versions in `requirements.txt` reflect the shared environment used by the authors where available.
+
+
+- Python 3.9 is the tested version
+- Install a PyTorch build appropriate for your CUDA/driver stack before installing the remaining dependencies
 - Required packages: `numpy`, `opencv-python`, `tqdm`, `yaml`, `torch`
   Install via:
   
